@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: jenkins-demo
+  name: jenkins-demo-v1
   namespace: default
 spec:
   template:
