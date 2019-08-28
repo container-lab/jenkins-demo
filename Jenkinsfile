@@ -15,9 +15,9 @@ node('aws-test') {
     }
     stage('Push') {
         echo "4.Push Docker Image Stage"
-         withDockerRegistry(credentialsId: 'ecr:cn-northwest-1:b1f122ae-71cb-4929-ba07-8e99708bc8e5', url: 'https://182335798701.dkr.ecr.cn-northwest-1.amazonaws.com.cn') {
-            sh "docker push 182335798701.dkr.ecr.cn-northwest-1.amazonaws.com.cn/jenkins-demo:${build_tag}"
-       }
+        withDockerRegistry(credentialsId: 'ecr:cn-northwest-1:44d5ee4f-232d-408d-bbf0-8ebbc8156fd0', url: 'https://182335798701.dkr.ecr.cn-northwest-1.amazonaws.com.cn') {
+           sh "docker push 182335798701.dkr.ecr.cn-northwest-1.amazonaws.com.cn/jenkins-demo:${build_tag}"
+        }
     }
     stage('Deploy') {
         echo "5. Deploy Stage"
